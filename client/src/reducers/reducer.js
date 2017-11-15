@@ -1,6 +1,6 @@
 import {FETCH_WEATHER_SUCCESS} from '../actions/actions';
 const initialState = {
-    weatherArray:{}
+    weatherArray:[]
 };
   
 export default function reducer(state = initialState, action) {

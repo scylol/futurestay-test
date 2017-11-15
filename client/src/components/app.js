@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import {fetchWeather} from '../actions/actions';
+import Temp from './temp';
 
 
 
@@ -8,25 +9,18 @@ import {fetchWeather} from '../actions/actions';
 export class App extends React.Component {
   
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.dispatch(fetchWeather());
-  
   }
 
 
 
   render() {
-    // const weather = this.props.weatherArray.list.map((weather, index) => (
-    //   <li key={index} className="topic-item">
-    //     {weather}
-    //   </li>
-    // ));
+    
     return (
         <div className="App">
         
-        <select>
-        <option value='Tuesday'>{this.props.weatherArray[0].main.temp} </option>
-        </select>
+       <Temp />
         
       
             
